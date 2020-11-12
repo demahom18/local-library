@@ -23,7 +23,6 @@ exports.genre_detail = function(req, res, next) {
 
     var id = mongoose.Types.ObjectId(req.params.id)
 
-
     async.parallel({
 
         genre: function(callback) {
@@ -35,7 +34,6 @@ exports.genre_detail = function(req, res, next) {
                 .exec(callback)
         },
     }, function(err, results) {
-
 
         if (err) { return next(err) }
         if (results.genre == null) {

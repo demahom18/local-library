@@ -25,6 +25,17 @@ AuthorSchema
         return (this.date_of_death.getYear() - this.date_of_birth.getYear()).toString();
     });
 
+//Virtual for lifespan formatted
+AuthorSchema
+    .virtual('lifespan_formatted')
+    .get(function() {
+
+        var date_of_birth = this.date_of_birth ? DateTime.fromJSDate(this.date_of_birth).toLocaleString(DateTime.DATE_MED) : ''
+        var date_of_death = this.date_of_death ? DateTime.fromJSDate(this.date_of_death).toLocaleString(DateTime.DATE_MED) : ''
+
+        return date_of_birth + ' - ' + date_of_death
+    });
+
 // Virtual for author's URL
 AuthorSchema
     .virtual('url')
@@ -36,8 +47,9 @@ AuthorSchema
 AuthorSchema
     .virtual('date_of_birth_formatted')
     .get(function() {
+
         return this.date_of_birth ?
-            DateTime.fromJSDate(this.date_of_birth).toLocaleString(DateTime.DATE_MED) : ''
+            DateTime.fromJSDate(this.date_of_birth).toLocaleString(DateTime.DATE_MED_WITH_WEEKDAY) : ''
     });
 
 //Virtual for the Date of Death format
