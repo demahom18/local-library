@@ -1,0 +1,28 @@
+extends layout
+
+block content
+  h1 #{title}: #{book.title} by #{book.author.name}
+  
+  if book_instances
+  
+    p There are #{book_instances.length} instances of this book in the library:
+    p(style='color:orange;') #[strong Please delete all these instances before attempting to delete this author.]
+  
+    div(style='margin-left:20px;margin-top:20px')
+
+      h4 Book Instances
+    
+      dl
+      each bookinstance in book_instances
+        dt 
+          a(href=bookinstance.url) #{book.title}
+        dd #[u Book instance imprint:] #{bookinstance.imprint} and #[u Status:] #{bookinstance.status}
+
+  else
+    p Do you really want to delete this Book?
+    
+    form(method='POST' action='')
+      div.form-group
+        input.form-control(type='hidden',name='book', required='true', value=book._id )
+
+      button.btn.btn-primary(type='submit') Delete

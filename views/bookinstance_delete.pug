@@ -1,0 +1,15 @@
+extends layout
+
+block content
+  h1 #{title}: #{book.title} 
+  p #[span(style='color:blue; font-weight:bold') Book Instance infos:] 
+  | imprit: #[u #[strong #{bookinstance.imprint}] ] || isbn: #[u #[strong #{book.isbn}] ] 
+  hr
+  p 
+    strong Do you really want to delete this Book?
+  div  
+    form(method='POST' action='')
+      div.form-group
+        input.form-control(type='hidden',name='bookinstance', required='true', value=bookinstance._id )
+
+      button.btn.btn-primary(type='submit') Delete
