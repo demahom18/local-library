@@ -5,7 +5,6 @@ var BookInstance = require('../models/bookinstance');
 const { body, validationResult } = require('express-validator');
 
 var async = require('async');
-const { update } = require('../models/bookinstance');
 
 exports.index = function(req, res) {
 

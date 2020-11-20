@@ -2,7 +2,6 @@ var Author = require('../models/author')
 var Book = require('../models/book')
 var async = require('async')
 const { body, validationResult } = require('express-validator');
-const author = require('../models/author');
 
 //Display list of all Authors
 exports.author_list = function(req, res, next) {
