@@ -1,4 +1,4 @@
-Site web créer avec NodeJS/EXPRESS, MongoDB et pug. Vous trouverez le tuto sur le site de [MDN](https://developer.mozilla.org/fr/docs/Learn/Server-side/Express_Nodejs)
+Site web créé avec NodeJS/EXPRESS, MongoDB et pug. Vous trouverez le tuto sur le site de [MDN](https://developer.mozilla.org/fr/docs/Learn/Server-side/Express_Nodejs)
 
 ## Dévéloppement
 
