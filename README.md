@@ -1,4 +1,4 @@
-Site web créé avec NodeJS/EXPRESS, MongoDB et pug. Vous trouverez le tuto sur le site de [MDN](https://developer.mozilla.org/fr/docs/Learn/Server-side/Express_Nodejs)
+Fictive library website. Api rest with CRUD operations on books, genres, authors, ... Node.js / Express, MongoDB / Mongoose and pug.
 
 ## Dévéloppement
 
