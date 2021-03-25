@@ -1,4 +1,4 @@
-Fictive library website. Api rest with CRUD operations on books, genres, authors, ... 
+Fictive library website. Api rest with CRUD operations on books, genres, authors, ... <br>
 Made with Node.js / Express, MongoDB / Mongoose and pug.
 
 ## Dévéloppement
